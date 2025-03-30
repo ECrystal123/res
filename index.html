@@ -124,7 +124,19 @@
         </li>
       </ol>
     </nav>
-    
+        <p id="hitokoto">
+      <a style="color: deepskyblue;text-decoration: none;" href="#" id="hitokoto_text">:D 获取中...</a>
+    </p>
+    <script>
+      fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+          const hitokoto = document.querySelector('#hitokoto_text')
+          hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+          hitokoto.innerText = data.hitokoto
+        })
+        .catch(console.error) 
+        </script>
     <!-- 资源列表 - 第一行 -->
     <div class="row row-cols-1 row-cols-md-3 g-4">
       <!-- 镜像站卡片 -->
@@ -245,7 +257,7 @@
 
   <!-- 页脚 -->
   <footer class="footer">
-    <div class="container text-center">
+    <div class="text-center">
       <div class="mb-3">
         <img src="https://badges.toozhao.com/badges/01JPZECHJDX8659EY1J63BHVQB/blue.svg" alt="访问统计" class="img-fluid">
       </div>
