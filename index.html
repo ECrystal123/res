@@ -28,6 +28,7 @@
       margin-bottom: 1.5rem;
       border-radius: 10px;
       overflow: hidden;
+      height: 100%; /* 确保卡片高度一致 */
     }
     
     .resource-card:hover {
@@ -54,6 +55,20 @@
       background-color: #e9ecef;
       padding: 0.75rem 1rem;
       border-radius: 0.25rem;
+    }
+    
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    
+    .card-text {
+      flex-grow: 1;
+    }
+    
+    .btn-container {
+      margin-top: auto;
     }
   </style>
 </head>
@@ -110,8 +125,8 @@
       </ol>
     </nav>
     
-    <!-- 资源列表 -->
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <!-- 资源列表 - 第一行 -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
       <!-- 镜像站卡片 -->
       <div class="col">
         <div class="card resource-card h-100">
@@ -119,9 +134,12 @@
             <h5 class="card-title">
               <i class="bi bi-box-arrow-up-right resource-icon"></i> 镜像站
             </h5>
-            <a href="mirrors.html" class="btn btn-primary">
-              <i class="bi bi-arrow-right"></i> 前往镜像站
-            </a>
+            <p class="card-text"> </p>
+            <div class="btn-container">
+              <a href="mirrors.html" class="btn btn-primary w-100">
+                <i class="bi bi-arrow-right"></i> 前往镜像站
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -133,14 +151,36 @@
             <h5 class="card-title">
               <i class="bi bi-globe resource-icon"></i> 网站资源
             </h5>
-            <p class="card-text">网站资源合集</p>
-            <a href="wzzy.html" class="btn btn-primary">
-              <i class="bi bi-arrow-right"></i> 查看资源
-            </a>
+            <p class="card-text"> </p>
+            <div class="btn-container">
+              <a href="wzzy.html" class="btn btn-primary w-100">
+                <i class="bi bi-arrow-right"></i> 查看资源
+              </a>
+            </div>
           </div>
         </div>
       </div>
       
+      <!-- 音乐文件夹卡片 -->
+      <div class="col">
+        <div class="card resource-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="bi bi-music-note-beamed resource-icon"></i> 音乐文件夹
+            </h5>
+            <p class="card-text"> </p>
+            <div class="btn-container">
+              <a href="music.html" class="btn btn-primary w-100">
+                <i class="bi bi-arrow-right"></i> 前往音乐文件夹
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 资源列表 - 第二行 -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
       <!-- 音乐资源卡片 -->
       <div class="col">
         <div class="card resource-card h-100">
@@ -149,12 +189,12 @@
               <i class="bi bi-music-note-beamed resource-icon"></i> nggyu.mp3
             </h5>
             <p class="card-text">音乐文件 (3.4MB)</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="/res/indexfiles/nggyu.mp3" class="btn btn-outline-primary" target="_blank">
+            <div class="btn-container d-flex justify-content-between">
+              <a href="/res/indexfiles/nggyu.mp3" class="btn btn-outline-primary flex-fill me-2" target="_blank">
                 <i class="bi bi-download"></i> 下载
               </a>
-              <a href="/res/indexfiles/nggyu.mp3" class="btn btn-outline-success" target="_blank">
-                <i class="bi bi-play"></i> 在线播放
+              <a href="/res/indexfiles/nggyu.mp3" class="btn btn-outline-success flex-fill" target="_blank">
+                <i class="bi bi-play"></i> 播放
               </a>
             </div>
           </div>
@@ -169,12 +209,32 @@
               <i class="bi bi-image resource-icon"></i> IMG_7031.jpg
             </h5>
             <p class="card-text">图片文件 (342KB)</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <a href="/res/indexfiles/IMG_7031.jpg" class="btn btn-outline-primary" target="_blank">
+            <div class="btn-container d-flex justify-content-between">
+              <a href="/res/indexfiles/IMG_7031.jpg" class="btn btn-outline-primary flex-fill me-2" target="_blank">
                 <i class="bi bi-download"></i> 下载
               </a>
-              <a href="/res/indexfiles/IMG_7031.jpg" class="btn btn-outline-success" target="_blank">
-                <i class="bi bi-eye"></i> 在线查看
+              <a href="/res/indexfiles/IMG_7031.jpg" class="btn btn-outline-success flex-fill" target="_blank">
+                <i class="bi bi-eye"></i> 查看
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 404页面卡片 -->
+      <div class="col">
+        <div class="card resource-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">
+              <i class="bi bi-file-earmark-code resource-icon"></i> 404.html
+            </h5>
+            <p class="card-text">HTML文件 (718KB)</p>
+            <div class="btn-container d-flex justify-content-between">
+              <a href="/res/404.html" class="btn btn-outline-primary flex-fill me-2" target="_blank">
+                <i class="bi bi-download"></i> 下载
+              </a>
+              <a href="/res/404.html" class="btn btn-outline-success flex-fill" target="_blank">
+                <i class="bi bi-eye"></i> 查看
               </a>
             </div>
           </div>
