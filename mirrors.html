@@ -4,20 +4,225 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ender_crystal123的资源站-mirrors</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>Ender_crystal123的资源站 - 镜像站</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --primary-color: #5d78ff;
+      --secondary-color: #6c757d;
+    }
+    
+    body {
+      background-color: #f8f9fa;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      background: linear-gradient(135deg, var(--primary-color), #3a5bff);
+      color: white;
+      padding: 2.5rem 0;
+      margin-bottom: 2rem;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .breadcrumb {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    .breadcrumb-item a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .breadcrumb-item a:hover {
+      color: #3a5bff;
+    }
+    
+    .resource-container {
+      background-color: white;
+      border-radius: 12px;
+      padding: 0;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      margin-bottom: 2.5rem;
+      overflow: hidden;
+    }
+    
+    .resource-header {
+      background-color: #f1f5ff;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #e0e7ff;
+    }
+    
+    .resource-item {
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.2s;
+    }
+    
+    .resource-item:hover {
+      background-color: #f8faff;
+    }
+    
+    .resource-item:not(:last-child) {
+      border-bottom: 1px solid #f0f4ff;
+    }
+    
+    .resource-icon {
+      color: var(--primary-color);
+      margin-right: 15px;
+      font-size: 1.4rem;
+      width: 24px;
+      text-align: center;
+    }
+    
+    .resource-info {
+      flex: 1;
+    }
+    
+    .resource-name {
+      font-weight: 500;
+      color: #2d3748;
+      margin-bottom: 0.25rem;
+    }
+    
+    .resource-meta {
+      color: var(--secondary-color);
+      font-size: 0.85rem;
+    }
+    
+    .resource-actions {
+      margin-left: 15px;
+    }
+    
+    .btn-download {
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 8px;
+      padding: 0.4rem 1rem;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    
+    .btn-download:hover {
+      background-color: #4a6bff;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(93, 120, 255, 0.3);
+    }
+    
+    .nav-btn {
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      padding: 0.5rem 1.25rem;
+      transition: all 0.2s;
+    }
+    
+    footer {
+      background-color: #2d3748;
+      color: white;
+      padding: 1.75rem 0;
+      margin-top: auto;
+    }
+    
+    .badge-container {
+      margin-top: 2.5rem;
+      text-align: center;
+    }
+    
+    @media (max-width: 768px) {
+      .header {
+        padding: 2rem 0;
+      }
+      
+      .resource-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .resource-actions {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+      }
+      
+      .btn-download {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>mirrors</h1>
-  /<a href="index.html">root</a>/<a href="mirrors.html">mirrors</a>
-  <hr>
-  <a href="index.html">..</a>
-  <hr>
-  <img src="file.png" width=15 />
-  <a href="/res/mirrors/marked.min.js">marked.min.js(40KB)</a>
-  <hr>
-  <img src="https://badges.toozhao.com/badges/01JPZECHJDX8659EY1J63BHVQB/blue.svg" />
+  <!-- 页面头部 -->
+  <header class="header text-center">
+    <div class="container">
+      <h1 class="display-5 fw-bold">
+        <i class="bi bi-mirror"></i> Mirrors
+      </h1>
+    </div>
+  </header>
+  
+  <!-- 主要内容区 -->
+  <div class="container">
+    <!-- 面包屑导航 -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house-door"></i> 首页</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><i class="bi bi-mirror"></i> 镜像站</a></li>
+      </ol>
+    </nav>
+    
+    <!-- 导航按钮 -->
+    <a href="index.html" class="btn btn-outline-primary nav-btn">
+      <i class="bi bi-arrow-left"></i> 返回首页
+    </a>
+    
+    <!-- 资源列表 -->
+    <div class="resource-container">
+      <div class="resource-header">
+        <h5 class="mb-0"><i class="bi bi-collection"></i> 可用镜像资源</h5>
+      </div>
+      
+      <div class="resource-item">
+        <i class="bi bi-file-earmark-code resource-icon"></i>
+        <div class="resource-info">
+          <div class="resource-name">marked.min.js</div>
+          <div class="resource-meta">JavaScript 文件 · 40KB</div>
+        </div>
+        <div class="resource-actions">
+          <a href="/res/mirrors/marked.min.js" class="btn btn-download">
+            <i class="bi bi-download"></i> 下载
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 访问统计 -->
+    <div class="badge-container">
+      <img src="https://badges.toozhao.com/badges/01JPZECHJDX8659EY1J63BHVQB/blue.svg" alt="访问统计" class="img-fluid">
+    </div>
+  </div>
+  
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="mb-0">© 2025 Ender_crystal123的资源站 · 保留所有权利</p>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

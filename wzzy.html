@@ -5,17 +5,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ender_crystal123的资源站-网站资源</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    /* 自定义样式 */
+    body {
+      background-color: #f8f9fa;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header {
+      background-color: #4a6baf;
+      color: white;
+      padding: 2rem 0;
+      margin-bottom: 2rem;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .breadcrumb {
+      background-color: #e9ecef;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .breadcrumb-item a {
+      text-decoration: none;
+      color: #4a6baf;
+      font-weight: 500;
+    }
+    
+    .resource-container {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .resource-item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+    }
+    
+    .resource-item:last-child {
+      border-bottom: none;
+    }
+    
+    .resource-icon {
+      color: #4a6baf;
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .resource-link {
+      color: #333;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .resource-link:hover {
+      color: #4a6baf;
+      text-decoration: underline;
+    }
+    
+    footer {
+      background-color: #343a40;
+      color: white;
+      padding: 1.5rem 0;
+      margin-top: auto;
+    }
+    
+    .badge-container {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    
+    .nav-btn {
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>网站资源</h1>
- /<a href="index.html">root</a>/<a href="wzzy.html">网站资源</a>
-  <hr>
-  <a href="index.html">..</a>
-  <hr>
-  <img src="files.png" width=15 /><a href="mainsite.html">ecrystal123.github.io</a>
-  <hr
+  <!-- 页面头部 -->
+  <header class="header text-center">
+    <div class="container">
+      <h1 class="display-5">
+        <i class="bi bi-globe2"></i> 网站资源
+      </h1>
+      
+    </div>
+  </header>
+  
+  <!-- 主要内容区 -->
+  <div class="container">
+    <!-- 面包屑导航 -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house"></i> root</a></li>
+        <li class="breadcrumb-item active" aria-current="page"><i class="bi bi-globe2"></i> 网站资源</a></li>
+      </ol>
+    </nav>
+    
+    <!-- 导航按钮 -->
+    <a href="index.html" class="btn btn-outline-secondary nav-btn">
+      <i class="bi bi-arrow-up"></i> 返回上一级
+    </a>
+    
+    <!-- 资源列表 -->
+    <div class="resource-container">
+      <div class="resource-item">
+        <i class="bi bi-folder resource-icon"></i>
+        <a href="mainsite.html" class="resource-link">ecrystal123.github.io</a>
+      </div>
+    </div>
+    
+    <!-- 访问统计 -->
+    <div class="badge-container">
+      <img src="https://badges.toozhao.com/badges/01JPZECHJDX8659EY1J63BHVQB/blue.svg" alt="访问统计" class="img-fluid">
+    </div>
+  </div>
+  
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container text-center">
+      <p class="mb-0">© 2025 Ender_crystal123的资源站. 保留所有权利.</p>
+    </div>
+  </footer>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-<img src="https://badges.toozhao.com/badges/01JPZECHJDX8659EY1J63BHVQB/blue.svg" />
+
 </html>
